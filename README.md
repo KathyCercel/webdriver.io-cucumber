@@ -5,6 +5,8 @@
 Install Node JS via NVM
 [Instalation Guide](https://joachim8675309.medium.com/installing-node-js-with-nvm-4dc469c977d9) details the best way to install node with `NVM`. Guidance is given for OSX, Linux and Windows Users
 
+`nvm use 14`
+
 ## Install and setup 
 
 To set up you will need to do the following
