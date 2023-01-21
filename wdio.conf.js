@@ -1,13 +1,7 @@
 const moment = require('moment');
 exports.config = {
   skipSeleniumInstall: false,
-  seleniumInstallArgs: {
-    requestOpts: {
-      strictSSL: false,
-      timeout: 10000,
-      proxy: proxyurl,
-    },
-  },
+  
   //
   // ====================
   // Runner Configuration
