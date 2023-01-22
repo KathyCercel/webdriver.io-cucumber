@@ -16,9 +16,26 @@ HTTPS: git clone https://github.com/KathyCercel/webdriver.io-cucumber.git
 
 `npm install`
 
-### Run test
+### Run functional UI tests
+[webdriverIO descriptio](https://webdriver.io/docs/frameworks)
 
 `npm run test`
+
+### Run integration API tests
+
+[mocha description](https://www.npmjs.com/package/mocha)
+[mocha framework](https://github.com/mochajs/mocha)
+
+
+`npm run integration:tests`
+
+### Run eslint
+
+[eslint description](https://www.npmjs.com/package/eslint)
+ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code. 
+
+`npm run lint`
+`npm run lint:fix` 
 
 ### Report
 
