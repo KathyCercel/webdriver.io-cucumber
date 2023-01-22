@@ -1,10 +1,10 @@
-const { Given, Then, When } = require('@cucumber/cucumber');
+const {Given, Then, When} = require('@cucumber/cucumber');
 const HomePage = require('../pages/home.page');
 
 Given('the user is on home page', () => {
   HomePage.open();
   expect(browser).toHaveTitle(
-    'Cryptocurrency Prices, Charts And Market Capitalizations | CoinMarketCap'
+      'Cryptocurrency Prices, Charts And Market Capitalizations | CoinMarketCap',
   );
 });
 
