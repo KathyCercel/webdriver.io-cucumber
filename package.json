@@ -6,7 +6,10 @@
   "scripts": {
     "test": "wdio wdio.conf.js",
     "generate:report": "allure generate reports/allure-results/",
-    "open:report": "allure open"
+    "open:report": "allure open",
+    "integration:tests": "mocha 'integration-tests/**/*.js'",
+    "lint": "eslint ./",
+    "lint:fix": "eslint --fix --ext .js,.jsx ."
   },
   "repository": {
     "type": "git",
@@ -28,9 +31,18 @@
     "@wdio/spec-reporter": "^8.1.2",
     "@wdio/sync": "^7.27.0",
     "chromedriver": "^109.0.0",
+    "eslint": "^8.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-mocha": "^10.1.0",
+    "mocha": "^10.2.0",
     "wdio-chromedriver-service": "^8.0.1"
   },
   "dependencies": {
-    "moment": "^2.29.4"
+    "axios": "^1.2.3",
+    "chai": "^4.3.7",
+    "moment": "^2.29.4",
+    "qs": "^6.11.0"
   }
 }
