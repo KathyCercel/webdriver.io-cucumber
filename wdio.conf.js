@@ -1,7 +1,7 @@
 const moment = require('moment');
 exports.config = {
   skipSeleniumInstall: false,
-  
+
   //
   // ====================
   // Runner Configuration
@@ -265,16 +265,16 @@ exports.config = {
    * @param {number}             result.duration  duration of scenario in milliseconds
    * @param {Object}             context          Cucumber World object
    */
-  afterStep: function (
-    step,
-    context,
-    { error, result, duration, passed, retries }
+  afterStep: function(
+      step,
+      context,
+      {error, result, duration, passed, retries},
   ) {
     if (error) {
       browser.saveScreenshot(
-        './reports/screenshots/Fail_' +
+          './reports/screenshots/Fail_' +
           moment().format('DD-MMM-YYYY-HH-MM-SS') +
-          '.png'
+          '.png',
       );
     }
   },

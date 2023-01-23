@@ -7,3 +7,5 @@ Feature: Test
 
     Scenario: test
         When the user selects '20' rows
+        When the 'Name' page content is captured
+        

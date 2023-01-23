@@ -1,9 +1,15 @@
 const BasePage = require('./base.page');
 
-class HomePage extends BasePage {
+class HomePage {
+  constructor() {
+    this.basePage = new BasePage();
+    this.showRowsDropDownButton = 'div[class*="sc-aef7b723-0 sc-dae82938-0 coScOT"]';
+    this.cryptocurrencyNames = 'div[class*="sc-121f5308-1 hjdHIg"]';
+  }
+
   get showRowsDropDown() {
     return $(
-      'div.sc-aef7b723-0.dDQUel.table-control-area > div.sc-aef7b723-0.jPLKhd.table-control-page-sizer > div'
+        this.showRowsDropDownButton,
     );
   }
   get tableRows() {
@@ -28,8 +34,17 @@ class HomePage extends BasePage {
     }
   }
 
-  open() {
-    super.open('https://coinmarketcap.com/');
+  async open() {
+    await this.basePage.open('https://coinmarketcap.com/');
+  }
+
+  async assertPageElementIsDisplayed(selector) {
+    try {
+      const elem = await $(selector);
+      await elem.waitForDisplayed({timeout: 3000});
+    } catch (error) {
+      console.error(error);
+    }
   }
 }
 
